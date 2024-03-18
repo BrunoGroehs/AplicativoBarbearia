@@ -36,6 +36,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         texto2 = new javax.swing.JLabel();
         texto3 = new javax.swing.JLabel();
@@ -43,37 +44,63 @@ public class Login extends javax.swing.JFrame {
         textoUsuario1 = new javax.swing.JTextField();
         textoSenha1 = new javax.swing.JPasswordField();
         botaoLogin = new javax.swing.JButton();
+        jBCadastro = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setForeground(java.awt.Color.gray);
 
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         texto2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         texto2.setForeground(new java.awt.Color(255, 255, 255));
         texto2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        texto2.setText("Senha");
+        texto2.setText("senha");
         texto2.setToolTipText("");
         texto2.setAlignmentY(0.0F);
+        jPanel1.add(texto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 170, -1, -1));
 
         texto3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         texto3.setForeground(new java.awt.Color(255, 255, 255));
         texto3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        texto3.setText("Login");
+        texto3.setText("LOGIN");
         texto3.setToolTipText("");
         texto3.setAlignmentY(0.0F);
+        jPanel1.add(texto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
 
         texto.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         texto.setForeground(new java.awt.Color(255, 255, 255));
         texto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        texto.setText("Usuario");
+        texto.setText("usuario");
         texto.setToolTipText("");
         texto.setAlignmentY(0.0F);
+        jPanel1.add(texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 96, -1, -1));
 
         textoUsuario1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoUsuario1ActionPerformed(evt);
             }
         });
+        jPanel1.add(textoUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 124, 160, 28));
+
+        textoSenha1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoSenha1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textoSenha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 198, 160, 28));
 
         botaoLogin.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         botaoLogin.setText("Entrar");
@@ -82,64 +109,35 @@ public class Login extends javax.swing.JFrame {
                 botaoLoginActionPerformed(evt);
             }
         });
+        jPanel1.add(botaoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 105, 46));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(texto2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(textoSenha1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(texto, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(textoUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 48, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(botaoLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(157, 157, 157)
-                    .addComponent(texto3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(147, 147, 147)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(182, 182, 182)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textoUsuario1)
-                    .addComponent(texto, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(texto2, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(textoSenha1))
-                .addGap(18, 18, 18)
-                .addComponent(botaoLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(155, 155, 155))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(105, 105, 105)
-                    .addComponent(texto3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(352, 352, 352)))
-        );
+        jBCadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jBCadastro.setForeground(new java.awt.Color(255, 255, 255));
+        jBCadastro.setText("Cadastre-se");
+        jBCadastro.setBorder(null);
+        jBCadastro.setBorderPainted(false);
+        jBCadastro.setContentAreaFilled(false);
+        jBCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCadastroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 90, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/FundoLogin.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 310, 340));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -154,6 +152,15 @@ public class Login extends javax.swing.JFrame {
         this.controller.entrarNoSistema();
         
     }//GEN-LAST:event_botaoLoginActionPerformed
+
+    private void textoSenha1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoSenha1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textoSenha1ActionPerformed
+
+    private void jBCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastroActionPerformed
+        // TODO add your handling code here:
+        controller.cadastraUsuario();
+    }//GEN-LAST:event_jBCadastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,7 +199,10 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoLogin;
+    private javax.swing.JButton jBCadastro;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel texto;
     private javax.swing.JLabel texto2;
     private javax.swing.JLabel texto3;

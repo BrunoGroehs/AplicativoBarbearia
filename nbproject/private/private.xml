@@ -3,22 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/View/MenuPrincipal.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Controller/Helper/LoginHelper.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/View/Agenda.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/barbershop/BarberShop.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/View/Login.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Model/Usuario.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/BancoDeDados/Banco.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Model/Cliente.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Model/Pessoa.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Model/Agendamento.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Controller/LoginController.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Model/Servico.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Controller/Helper/AgendaHelper.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Controller/Helper/IHelper.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Controller/MenuPrincipalController.java</file>
-            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/BarberShop/src/Controller/AgendaController.java</file>
+            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/AplicativoBarbearia/src/View/CadastroUsuario.java</file>
+            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/AplicativoBarbearia/src/View/Agenda.java</file>
+            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/AplicativoBarbearia/src/Controller/LoginController.java</file>
+            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/AplicativoBarbearia/src/Controller/AgendaController.java</file>
+            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/AplicativoBarbearia/src/Helper/CadastroHelper.java</file>
+            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/AplicativoBarbearia/src/Helper/LoginHelper.java</file>
+            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/AplicativoBarbearia/src/Controller/UsuarioController.java</file>
+            <file>file:/C:/Users/Bruno%20Groehs/Desktop/Barber/AplicativoBarbearia/src/View/Login.java</file>
         </group>
     </open-files>
 </project-private>

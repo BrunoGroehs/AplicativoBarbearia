@@ -1,10 +1,12 @@
-/*
+/* m
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
 
 import Controller.MenuPrincipalController;
+import javax.swing.JTable;
+
 
 /**
  *
@@ -18,8 +20,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
+        controller = new MenuPrincipalController(this);
         initComponents();
-        this.controller = new MenuPrincipalController(this);
+        incia();
     }
 
     /**
@@ -31,6 +34,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableClientesHoje = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -40,6 +47,26 @@ public class MenuPrincipal extends javax.swing.JFrame {
         menuAgenda = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTableClientesHoje.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nome", "Horario", "Servico", "Valor"
+            }
+        ));
+        jScrollPane1.setViewportView(jTableClientesHoje);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 47, -1, 410));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel1.setText("CLIENTES HOJE");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, -1, 50));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/6867640.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 723, 477));
 
         jMenuCadastro.setText("Cadastro");
 
@@ -72,17 +99,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenuOperacao);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 932, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,14 +145,31 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenu jMenuOperacao;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableClientesHoje;
     private javax.swing.JMenuItem menuAgenda;
     // End of variables declaration//GEN-END:variables
+    
+    private void incia() {
+        controller.atualizaTabelaClienteHoje();
+    }
+
+    public JTable getjTableClientesHoje() {
+        return jTableClientesHoje;
+    }
+
+    public void setjTableClientesHoje(JTable jTableClientesHoje) {
+        this.jTableClientesHoje = jTableClientesHoje;
+    }
+    
 }
