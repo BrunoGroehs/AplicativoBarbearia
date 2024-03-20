@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 public class Agenda extends javax.swing.JFrame {
 
     private final AgendaController controller;
+    
 
     /**
      * Creates new form MenuPrincipal
@@ -23,6 +24,7 @@ public class Agenda extends javax.swing.JFrame {
     public Agenda() {
         initComponents();
         controller = new AgendaController(this);
+        
         iniciar();
         
     }
@@ -271,12 +273,14 @@ public class Agenda extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCriaClienteServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCriaClienteServicoActionPerformed
-        // TODO add your handling code here:
+        controller.navegaParaCadastroServico();
+        setVisible(false);
     }//GEN-LAST:event_jButtonCriaClienteServicoActionPerformed
 
     private void jButtonCriaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCriaClienteActionPerformed
         // TODO add your handling code here:
-        this.controller.iniciaObjetos();
+        controller.navegaParaCadastroCliente();
+        setVisible(false);
     }//GEN-LAST:event_jButtonCriaClienteActionPerformed
 
     private void JBoxServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBoxServicosActionPerformed

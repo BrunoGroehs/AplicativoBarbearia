@@ -23,6 +23,21 @@ public class AgendaHelper implements  IHelper{
         this.view = view;
     }
 
+    public void limpaTabela() {
+        //pega a tabela
+        DefaultTableModel tableModel = (DefaultTableModel) view.getjTable1().getModel();
+        tableModel.setRowCount(0);
+    }
+
+    public void limpaBoxCliente() {
+        DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getJBoxClientes().getModel();
+        comboBoxModel.removeAllElements();
+    }
+
+    public void limpaBoxServicos() {
+        DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getJBoxServicos().getModel();
+        comboBoxModel.removeAllElements();
+    }
     public void preencherTabela(ArrayList<Agendamento> agendamentos) {
         //pega a tabela
         DefaultTableModel tableModel = (DefaultTableModel) view.getjTable1().getModel();

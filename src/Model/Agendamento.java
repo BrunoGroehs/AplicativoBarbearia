@@ -17,7 +17,8 @@ import java.util.Date;
  * @author Bruno Groehs
  */
 public class Agendamento {
-    private int id;
+    protected static int contador = 0;
+    protected int id;
     private Cliente cliente;
     private Servico servico;
     private float valor;
@@ -25,7 +26,7 @@ public class Agendamento {
     private String observacao;
 
     public Agendamento(Cliente cliente, Servico servico, float valor, String date) {
-        
+        this.id = ++contador;
         this.cliente = cliente;
         this.servico = servico;
         this.valor = valor;
@@ -40,11 +41,18 @@ public class Agendamento {
 
     public Agendamento(Cliente cliente, Servico servico, float valor, String data, String observacao) {
         this(cliente,servico,valor,data);
+        this.id = ++contador;
         this.observacao = observacao;
     }
 
-    
-    
+    public static int getContador() {
+        return contador;
+    }
+
+    public static void setContador(int contador) {
+        Agendamento.contador = contador;
+    }
+
     public int getId() {
         return id;
     }
@@ -52,6 +60,10 @@ public class Agendamento {
     public void setId(int id) {
         this.id = id;
     }
+
+    
+    
+    
 
     public Cliente getCliente() {
         return cliente;

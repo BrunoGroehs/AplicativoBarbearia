@@ -9,12 +9,14 @@ package Model;
  * @author Bruno Groehs
  */
 public class Servico {
+    protected static int contador = 0;
     private int id;
     private String descricao;
     private float valor;
- 
-    public Servico(int id, String descricao, float valor) {
-        this.id = id;
+    
+    
+    public Servico(String descricao, float valor) {
+        this.id = ++contador;
         this.descricao = descricao;
         this.valor = valor;
     }    
