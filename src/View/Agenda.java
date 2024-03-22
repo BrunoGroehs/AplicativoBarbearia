@@ -5,6 +5,7 @@
 package View;
 
 import Controller.AgendaController;
+import java.awt.event.KeyEvent;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -109,9 +110,31 @@ public class Agenda extends javax.swing.JFrame {
             }
         });
 
+        jTextHora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextHoraActionPerformed(evt);
+            }
+        });
+        jTextHora.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextHoraKeyTyped(evt);
+            }
+        });
+
         jTextCampoValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextCampoValorActionPerformed(evt);
+            }
+        });
+
+        jTextData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextDataActionPerformed(evt);
+            }
+        });
+        jTextData.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextDataKeyTyped(evt);
             }
         });
 
@@ -274,13 +297,11 @@ public class Agenda extends javax.swing.JFrame {
 
     private void jButtonCriaClienteServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCriaClienteServicoActionPerformed
         controller.navegaParaCadastroServico();
-        setVisible(false);
     }//GEN-LAST:event_jButtonCriaClienteServicoActionPerformed
 
     private void jButtonCriaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCriaClienteActionPerformed
         // TODO add your handling code here:
         controller.navegaParaCadastroCliente();
-        setVisible(false);
     }//GEN-LAST:event_jButtonCriaClienteActionPerformed
 
     private void JBoxServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBoxServicosActionPerformed
@@ -307,6 +328,54 @@ public class Agenda extends javax.swing.JFrame {
     private void jTextObservacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextObservacaoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextObservacaoActionPerformed
+    /*Fazendo com que a data fique no formato certo sem precisar inserir (/)*/
+    private void jTextDataKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextDataKeyTyped
+        String caracteresPermitidos = "0123456789/";
+    if(!caracteresPermitidos.contains(evt.getKeyChar() + "")){
+        evt.consume();
+    }
+    if(jTextData.getText().length() >= 10 && evt.getKeyChar() != KeyEvent.VK_BACK_SPACE){
+        evt.consume();
+    }
+    
+    switch(jTextData.getText().length()){
+        case 2:
+            if (evt.getKeyChar() != KeyEvent.VK_BACK_SPACE)
+                jTextData.setText(jTextData.getText() + "/");
+            break;
+        case 5:
+            if (evt.getKeyChar() != KeyEvent.VK_BACK_SPACE)
+            jTextData.setText(jTextData.getText() + "/");
+            break;
+    }
+    }//GEN-LAST:event_jTextDataKeyTyped
+
+    private void jTextDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextDataActionPerformed
+
+    private void jTextHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextHoraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextHoraActionPerformed
+
+    private void jTextHoraKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextHoraKeyTyped
+        // TODO add your handling code here:
+        String caracteresPermitidos = "0123456789:";
+    if(!caracteresPermitidos.contains(evt.getKeyChar() + "")){
+        evt.consume();
+    }
+    if(jTextHora.getText().length() >= 5 && evt.getKeyChar() != KeyEvent.VK_BACK_SPACE){
+        evt.consume();
+    }
+    
+    switch(jTextHora.getText().length()){
+        case 2:
+            if (evt.getKeyChar() != KeyEvent.VK_BACK_SPACE)
+                jTextHora.setText(jTextHora.getText() + ":");
+            break;
+    }
+    }//GEN-LAST:event_jTextHoraKeyTyped
+    
 
     /**
      * @param args the command line arguments

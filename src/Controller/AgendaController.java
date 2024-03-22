@@ -66,10 +66,12 @@ public class AgendaController {
     }
     public void navegaParaCadastroCliente(){
         CadastroCliente cadastroCliente = new CadastroCliente();
+        view.setVisible(false);
         cadastroCliente.setVisible(true);
     }
     public void navegaParaCadastroServico(){
         CadastroServico cadastroServico = new CadastroServico();
+        view.setVisible(false);
         cadastroServico.setVisible(true);
     }
 }

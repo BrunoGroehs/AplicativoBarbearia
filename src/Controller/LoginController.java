@@ -32,7 +32,6 @@ public class LoginController {
         
     }
     public void cadastraUsuario(){
-        this.view.dispose();
         CadastroUsuario cadastro = new CadastroUsuario();
         cadastro.setVisible(true);
         

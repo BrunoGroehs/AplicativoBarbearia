@@ -8,6 +8,9 @@ import BancoDeDados.Banco;
 import Helper.MenuHelper;
 import Model.Agendamento;
 import View.Agenda;
+import View.CadastroCliente;
+import View.CadastroServico;
+import View.CadastroUsuario;
 import View.MenuPrincipal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -65,5 +68,20 @@ public class MenuPrincipalController {
         for (Agendamento agendamento1 : agend) {
             System.out.println(agendamento1.getCliente().getNome());            
         }
+    }
+
+    public void navegarParaCriaCliente() {
+        CadastroCliente cadastroCliente = new CadastroCliente();
+        cadastroCliente.setVisible(true);
+    }
+
+    public void navegarParaCriaServico() {
+        CadastroServico cadastroServico = new CadastroServico();
+        cadastroServico.setVisible(true);
+    }
+
+    public void navegarParaAddUsuario() {
+        CadastroUsuario cadastroUsuario = new CadastroUsuario();
+        cadastroUsuario.setVisible(true);
     }
 }

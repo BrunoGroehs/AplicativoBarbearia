@@ -40,9 +40,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuCadastro = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuCriaCliente = new javax.swing.JMenuItem();
+        jMenuCriaServico = new javax.swing.JMenuItem();
+        jMenuAddUsuario = new javax.swing.JMenuItem();
         jMenuOperacao = new javax.swing.JMenu();
         menuAgenda = new javax.swing.JMenuItem();
 
@@ -62,6 +62,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 47, -1, 410));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CLIENTES HOJE");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, -1, 50));
 
@@ -70,19 +71,29 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuCadastro.setText("Cadastro");
 
-        jMenuItem1.setText("Cliente");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuCriaCliente.setText("Cria Cliente");
+        jMenuCriaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuCriaClienteActionPerformed(evt);
             }
         });
-        jMenuCadastro.add(jMenuItem1);
+        jMenuCadastro.add(jMenuCriaCliente);
 
-        jMenuItem2.setText("Serviço");
-        jMenuCadastro.add(jMenuItem2);
+        jMenuCriaServico.setText("Cria Servico");
+        jMenuCriaServico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuCriaServicoActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuCriaServico);
 
-        jMenuItem3.setText("Usuario");
-        jMenuCadastro.add(jMenuItem3);
+        jMenuAddUsuario.setText("Adciona Usuario");
+        jMenuAddUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuAddUsuarioActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuAddUsuario);
 
         jMenuBar1.add(jMenuCadastro);
 
@@ -103,13 +114,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    private void jMenuCriaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCriaClienteActionPerformed
+        this.controller.navegarParaCriaCliente();
+    }//GEN-LAST:event_jMenuCriaClienteActionPerformed
 
     private void menuAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAgendaActionPerformed
         this.controller.navegarParaAgenda();
     }//GEN-LAST:event_menuAgendaActionPerformed
+
+    private void jMenuCriaServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCriaServicoActionPerformed
+        this.controller.navegarParaCriaServico();
+    }//GEN-LAST:event_jMenuCriaServicoActionPerformed
+
+    private void jMenuAddUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAddUsuarioActionPerformed
+        this.controller.navegarParaAddUsuario();
+    }//GEN-LAST:event_jMenuAddUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,11 +168,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenuItem jMenuAddUsuario;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuCriaCliente;
+    private javax.swing.JMenuItem jMenuCriaServico;
     private javax.swing.JMenu jMenuOperacao;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableClientesHoje;

@@ -39,9 +39,6 @@ public class CadastroHelper implements IHelper{
             
             //abre o login e fecha o CadastroUsuario
             this.view.setVisible(false);
-            
-            Login loginView = new Login();
-            loginView.setVisible(true);
         }
         else{JOptionPane.showMessageDialog(null, "Senhas diferentes!");}
     }
