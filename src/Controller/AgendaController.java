@@ -67,7 +67,7 @@ public class AgendaController {
             Agendamento agendamento = helper.obterModelo();
             
             banco.adicionarAgendamento(agendamento);
-            enviaE.enviaEmailCompleto(agendamento.getCliente().getNome(), agendamento.getHoraData(), agendamento.getDiaData());
+            enviaE.enviaEmailCompleto(agendamento.getCliente().getNome(), agendamento.getHoraData(), agendamento.getDiaData(), agendamento.getServico(), agendamento.getObservacao());
             
         }
         

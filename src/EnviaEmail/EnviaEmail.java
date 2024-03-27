@@ -4,6 +4,7 @@
  */
 package EnviaEmail;
 
+import Model.Servico;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.SimpleEmail;
 
@@ -12,7 +13,7 @@ import org.apache.commons.mail.SimpleEmail;
  * @author Bruno Groehs
  */
 public class EnviaEmail {
-    public void enviaEmailCompleto(String nome, String hora, String dia){
+    public void enviaEmailCompleto(String nome, String hora, String dia, Servico servico, String observacao){
             //a senha do seu email precisa ser criada em Segurança/autentificação/Senha para APP
             String meuEmail = "";//coloque seu email
             String minhaSenha = "";//coloque sua senha gerada no gmail
@@ -27,7 +28,7 @@ public class EnviaEmail {
             try {
                 email.setFrom(meuEmail);
                 String subject = "Cliente: " + nome + " agendou um horario.";
-                String msg = "Agendamento para: " + dia + " às " + hora + " horas.";
+                String msg = "Agendamento para: " + dia + " às " + hora + " horas.\nServico: " + servico.getDescricao() + " no Valor de R$" + servico.getValor() + "\nObservações: " + observacao + "";
                 email.setSubject(subject);
                 email.setMsg(msg);
                 email.addTo(meuEmail);

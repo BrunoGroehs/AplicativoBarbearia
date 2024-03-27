@@ -88,29 +88,30 @@ public class Banco {
     public void iniciaObjetos(){
         // Adicionar usuários (isso pode ser feito aqui ou em outro momento)
         Usuario usuario = new Usuario("", "");
-        Usuario usuario1 = new Usuario("Manuela", "manuzinha");
         
-        Cliente cliente1 = new Cliente("123456789", "João", "Silva");
-        Cliente cliente2 = new Cliente("987654321", "Maria", "Santos");
-        Cliente cliente3 = new Cliente("111222333", "Carlos", "Souza");
-        Cliente cliente4 = new Cliente("444555666", "Ana", "Oliveira");
-        Cliente cliente5 = new Cliente("777888999", "Pedro", "Ferreira");
-        Cliente cliente6 = new Cliente("222333444", "Paula", "Ribeiro");
-        Cliente cliente7 = new Cliente("555666777", "Fernando", "Gomes");
-        Cliente cliente8 = new Cliente("888999000", "Laura", "Almeida");
-        Cliente cliente9 = new Cliente("333444555", "Ricardo", "Cruz");
-        Cliente cliente10 = new Cliente("666777888", "Mariana", "Martins");
+        Cliente cliente1 = new Cliente("12345-678", "cliente1@example.com", "João Silva");
+        Cliente cliente2 = new Cliente("54321-876", "cliente2@example.com", "Maria Oliveira");
+        Cliente cliente3 = new Cliente("98765-432", "cliente3@example.com", "Pedro Souza");
+        Cliente cliente4 = new Cliente("13579-246", "cliente4@example.com", "Ana Santos");
+        Cliente cliente5 = new Cliente("64237-951", "cliente5@example.com", "Luiza Pereira");
+        Cliente cliente6 = new Cliente("24680-135", "cliente6@example.com", "Rafaela Costa");
+        Cliente cliente7 = new Cliente("86420-975", "cliente7@example.com", "Lucas Ferreira");
+        Cliente cliente8 = new Cliente("97531-864", "cliente8@example.com", "Mariana Almeida");
+        Cliente cliente9 = new Cliente("36912-483", "cliente9@example.com", "Gustavo Lima");
+        Cliente cliente10 = new Cliente("48369-123", "cliente10@example.com", "Carla Vieira");
 
-        Servico servico1 = new Servico("Manicure", 30);
-        Servico servico2 = new Servico("Pedicure", 45);
-        Servico servico3 = new Servico("Corte de Cabelo", 60);
-        Servico servico4 = new Servico("Coloração", 90);
-        Servico servico5 = new Servico("Maquiagem", 45);
-        Servico servico6 = new Servico("Depilação", 60);
-        Servico servico7 = new Servico("Massagem Relaxante", 90);
-        Servico servico8 = new Servico("Tratamento Facial", 60);
-        Servico servico9 = new Servico("Escova Progressiva", 120);
-        Servico servico10 = new Servico("Design de Sobrancelhas", 30);
+
+        Servico servico1 = new Servico("Barba Simples", 30);
+        Servico servico2 = new Servico("Barba Completa", 45);
+        Servico servico3 = new Servico("Barba com Hot Towel", 50);
+        Servico servico4 = new Servico("Penteado", 40);
+        Servico servico5 = new Servico("Hidratação Capilar", 50);
+        Servico servico6 = new Servico("Reflexologia", 60);
+        Servico servico7 = new Servico("Limpeza de Pele", 70);
+        Servico servico8 = new Servico("Design de Barba", 30);
+        Servico servico9 = new Servico("Aplicação de Botox Capilar", 80);
+        Servico servico10 = new Servico("Selagem Capilar", 100);
+
 
         Agendamento agendamento1 = new Agendamento(cliente1, servico1, 10, "13/03/2024 10:00");
         Agendamento agendamento2 = new Agendamento(cliente2, servico2, 15, "15/03/2024 15:30");
@@ -122,10 +123,20 @@ public class Banco {
         Agendamento agendamento8 = new Agendamento(cliente8, servico8, 10, "27/03/2024 11:00");
         Agendamento agendamento9 = new Agendamento(cliente9, servico9, 11, "29/03/2024 13:45");
         Agendamento agendamento10 = new Agendamento(cliente10, servico10, 15, "19/03/2024 15:00");
+        Agendamento agendamento11 = new Agendamento(cliente1, servico1, 14, "02/04/2024 10:30");
+        Agendamento agendamento12 = new Agendamento(cliente2, servico2, 16, "03/04/2024 14:45");
+        Agendamento agendamento13 = new Agendamento(cliente3, servico3, 15, "05/04/2024 11:15");
+        Agendamento agendamento14 = new Agendamento(cliente4, servico4, 13, "07/04/2024 09:00");
+        Agendamento agendamento15 = new Agendamento(cliente5, servico5, 12, "09/04/2024 12:45");
+        Agendamento agendamento16 = new Agendamento(cliente6, servico6, 11, "11/04/2024 16:30");
+        Agendamento agendamento17 = new Agendamento(cliente7, servico7, 15, "13/04/2024 13:00");
+        Agendamento agendamento18 = new Agendamento(cliente8, servico8, 16, "15/04/2024 11:30");
+        Agendamento agendamento19 = new Agendamento(cliente9, servico9, 14, "17/04/2024 10:15");
+        Agendamento agendamento20 = new Agendamento(cliente10, servico10, 13, "19/04/2024 15:45");
+
 
         
         adicionarUsuario(usuario);
-        adicionarUsuario(usuario1);
         
         adicionarCliente(cliente1);
         adicionarCliente(cliente2);
@@ -157,6 +168,16 @@ public class Banco {
         adicionarAgendamento(agendamento8);
         adicionarAgendamento(agendamento9);
         adicionarAgendamento(agendamento10);
+        adicionarAgendamento(agendamento11);
+        adicionarAgendamento(agendamento12);
+        adicionarAgendamento(agendamento13);
+        adicionarAgendamento(agendamento14);
+        adicionarAgendamento(agendamento15);
+        adicionarAgendamento(agendamento16);
+        adicionarAgendamento(agendamento17);
+        adicionarAgendamento(agendamento18);
+        adicionarAgendamento(agendamento19);
+        adicionarAgendamento(agendamento20);
         
         
     }

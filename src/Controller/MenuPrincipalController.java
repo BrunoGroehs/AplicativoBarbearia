@@ -49,15 +49,11 @@ public class MenuPrincipalController {
         String dataHoje = hoje.format(formato);
         
         for (Agendamento agendamento1 : agendamentos) {
-            System.out.println(agendamento1.getDiaData());
-            
             if(agendamento1.getDiaData().equals(dataHoje)){
-                System.out.println(agendamento1.getDiaData());
                 agendamentosHoje.add(agendamento1);
             }
             else{}
         }
-        imprimeArrayTeste(agendamentosHoje);
         return agendamentosHoje;
     }
     public void atualizaTabelaClienteHoje(){
@@ -65,11 +61,6 @@ public class MenuPrincipalController {
         helper.preencherTabela(buscaClienteHoje());
     }
     
-    public void imprimeArrayTeste(ArrayList<Agendamento> agend){
-        for (Agendamento agendamento1 : agend) {
-            System.out.println(agendamento1.getCliente().getNome());            
-        }
-    }
 
     public void navegarParaCriaCliente() {
         CadastroCliente cadastroCliente = new CadastroCliente();
