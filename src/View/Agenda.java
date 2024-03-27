@@ -59,6 +59,11 @@ public class Agenda extends javax.swing.JFrame {
         jButtonCriaClienteServico = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(0, 84, 204));
 
@@ -375,6 +380,12 @@ public class Agenda extends javax.swing.JFrame {
             break;
     }
     }//GEN-LAST:event_jTextHoraKeyTyped
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        //navega para menu nvoamente
+        MenuPrincipal menuP = new MenuPrincipal();
+        menuP.setVisible(true);
+    }//GEN-LAST:event_formWindowClosed
     
 
     /**

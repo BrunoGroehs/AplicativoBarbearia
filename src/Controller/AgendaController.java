@@ -1,6 +1,7 @@
 package Controller;
 
 import BancoDeDados.Banco;
+import EnviaEmail.EnviaEmail;
 import Helper.AgendaHelper;
 import Model.Agendamento;
 import Model.Cliente;
@@ -8,6 +9,7 @@ import Model.Servico;
 import View.Agenda;
 import View.CadastroCliente;
 import View.CadastroServico;
+import View.MenuPrincipal;
 import java.util.ArrayList;
 
 /*
@@ -60,7 +62,16 @@ public class AgendaController {
         helper.setarServico(servico.getValor());
     }
     public void agendar(){
-        banco.adicionarAgendamento(helper.obterModelo());
+        EnviaEmail enviaE = new EnviaEmail();
+        if(helper.obterModelo() != null){
+            Agendamento agendamento = helper.obterModelo();
+            
+            banco.adicionarAgendamento(agendamento);
+            enviaE.enviaEmailCompleto(agendamento.getCliente().getNome(), agendamento.getHoraData(), agendamento.getDiaData());
+            
+        }
+        
+        
         atualizaTabela();
         helper.limparTela();
     }
@@ -74,4 +85,5 @@ public class AgendaController {
         view.setVisible(false);
         cadastroServico.setVisible(true);
     }
+
 }

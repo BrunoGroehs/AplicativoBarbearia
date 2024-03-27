@@ -120,6 +120,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void menuAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAgendaActionPerformed
         this.controller.navegarParaAgenda();
+        setVisible(false);
     }//GEN-LAST:event_menuAgendaActionPerformed
 
     private void jMenuCriaServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCriaServicoActionPerformed

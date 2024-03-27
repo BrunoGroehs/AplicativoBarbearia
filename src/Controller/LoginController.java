@@ -13,6 +13,7 @@ public class LoginController {
     private LoginHelper helper;
     private Banco banco; // Referência ao banco de dados
     
+    
     public LoginController(Login view) {
         this.view = view;
         this.banco = Banco.getInstancia(); // Obtém a instância única do banco de dados

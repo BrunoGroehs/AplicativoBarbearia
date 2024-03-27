@@ -61,6 +61,7 @@ public class MenuPrincipalController {
         return agendamentosHoje;
     }
     public void atualizaTabelaClienteHoje(){
+        
         helper.preencherTabela(buscaClienteHoje());
     }
     
@@ -84,4 +85,9 @@ public class MenuPrincipalController {
         CadastroUsuario cadastroUsuario = new CadastroUsuario();
         cadastroUsuario.setVisible(true);
     }
+
+    public MenuPrincipal getView() {
+        return view;
+    }
+    
 }

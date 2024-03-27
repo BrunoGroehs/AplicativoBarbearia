@@ -23,7 +23,7 @@ public class ClienteHelper implements IHelper{
         String nome = view.getjNomeCadastroCliente().getText();
         String telefone = view.getjTelefoneCadastroCliente().getText();
         String email = view.getjEmailCadastroCliente().getText();
-        Cliente cliente = new Cliente(nome, telefone, email);
+        Cliente cliente = new Cliente(telefone, email, nome);
         return cliente;
     }
 
